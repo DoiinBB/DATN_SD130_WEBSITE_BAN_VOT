@@ -27,6 +27,7 @@ public class NguoiDung {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "ten")
     private String ten;
 
     @Column(name = "matkhau")

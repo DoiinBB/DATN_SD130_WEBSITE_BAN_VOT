@@ -1,5 +1,6 @@
 package com.example.demo.Entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,12 +19,15 @@ import lombok.NoArgsConstructor;
 public class ChuViCanVot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @Column(name = "id")
     private Integer id;
 
+    @Column(name = "chuvi")
     private String chuVi;
 
+    @Column(name = "mota")
     private String moTa;
 
+    @Column(name = "trangthai")
     private Integer trangThai;
 }

@@ -48,40 +48,40 @@ public class ChiTietSanPham {
     @Column(name = "trangthai")
     private int trangThai; // Trạng thái sản phẩm
 
-                @ManyToOne
-                @JoinColumn(name = "idSanPham")
-                private SanPham sanPham;
+    @ManyToOne
+    @JoinColumn(name = "idsanpham")
+    private SanPham sanPham;
 
-                @ManyToOne
-                @JoinColumn(name = "idDiemCanBang")
-                private DiemCanBang diemCanBang;
+    @ManyToOne
+    @JoinColumn(name = "iddiemcanbang")
+    private DiemCanBang diemCanBang;
 
-                @ManyToOne
-                @JoinColumn(name = "idVatLieuTruc")
-                private VatLieuTruc vatLieuTruc;
+    @ManyToOne
+    @JoinColumn(name = "idvatlieutruc")
+    private VatLieuTruc vatLieuTruc;
 
-                @ManyToOne
-                @JoinColumn(name = "idVatLieuKhung")
-                private VatLieuKhung vatLieuKhung;
+    @ManyToOne
+    @JoinColumn(name = "idvatlieukhung")
+    private VatLieuKhung vatLieuKhung;
 
-                @ManyToOne
-                @JoinColumn(name = "idDoCungThan")
-                private DoCungThan doCungThan;
+    @ManyToOne
+    @JoinColumn(name = "iddocungthan")
+    private DoCungThan doCungThan;
 
-                @ManyToOne
-                @JoinColumn(name = "idChieuDaiTongThe")
-                private ChieuDaiTongThe chieuDaiTongThe;
+    @ManyToOne
+    @JoinColumn(name = "idchieudaitongthe")
+    private ChieuDaiTongThe chieuDaiTongThe;
 
-                @ManyToOne
-                @JoinColumn(name = "idMucCangToiDa")
-                private MucCangToiDa mucCangToiDa;
+    @ManyToOne
+    @JoinColumn(name = "idmuccangtoida")
+    private MucCangToiDa mucCangToiDa;
 
-                @ManyToOne
-                @JoinColumn(name = "idChuViCanVot")
-                private ChuViCanVot chuViCanVot;
+    @ManyToOne
+    @JoinColumn(name = "idchuvicanvot")
+    private ChuViCanVot chuViCanVot;
 
-                @ManyToOne
-                @JoinColumn(name = "idMauSac")
-                private MauSac mauSac;
+    @ManyToOne
+    @JoinColumn(name = "idmausac")
+    private MauSac mauSac;
 
 }

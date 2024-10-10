@@ -1,5 +1,6 @@
 package com.example.demo.Entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,9 +21,12 @@ public class MucCangToiDa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "khoiluong")
     private Double khoiLuong;
 
+    @Column(name = "khoiluong")
     private String moTa;
 
+    @Column(name = "trangthai")
     private Integer trangThai;
 }

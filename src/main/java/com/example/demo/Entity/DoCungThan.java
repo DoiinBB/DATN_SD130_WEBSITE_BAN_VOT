@@ -25,8 +25,10 @@ public class DoCungThan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
 
+    @Column(name = "ten")
     private String ten;
 
     @Column(name = "trangthai")
