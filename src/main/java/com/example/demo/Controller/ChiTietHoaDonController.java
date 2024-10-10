@@ -35,7 +35,7 @@ public class ChiTietHoaDonController {
     }
 
     // Xử lý khi người dùng submit form thêm sản phẩm
-    @PostMapping("//ct-hoa-don/create")
+    @PostMapping("/ct-hoa-don/create")
     public String create(@ModelAttribute ChiTietHoaDon sanPham) {
         spRepo.save(sanPham); // Lưu sản phẩm vào cơ sở dữ liệu
         return "redirect:/hnh-shop/ct-hoa-don/hien-thi"; // Chuyển hướng về trang hiển thị sản phẩm sau khi thêm thành công
