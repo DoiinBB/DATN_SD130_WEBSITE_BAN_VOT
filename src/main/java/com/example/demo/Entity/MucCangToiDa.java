@@ -24,7 +24,7 @@ public class MucCangToiDa {
     @Column(name = "khoiluong")
     private Double khoiLuong;
 
-    @Column(name = "khoiluong")
+    @Column(name = "mota")
     private String moTa;
 
     @Column(name = "trangthai")

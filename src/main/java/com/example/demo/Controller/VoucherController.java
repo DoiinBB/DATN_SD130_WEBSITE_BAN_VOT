@@ -20,43 +20,43 @@ public class VoucherController {
     @Autowired
     private VoucherRepo voucherRepo;
 
-    @GetMapping("/voucher")
-    public String index(Model model) {
-        List<Voucher> vouchers = voucherRepo.findAll();
-        model.addAttribute("vouchers", vouchers);
-        return "index";
-    }
-
-    @GetMapping("/add")
-    public String addForm(Model model) {
-        model.addAttribute("voucher", new Voucher());
-        return "add";
-    }
-
-    @PostMapping("/add")
-    public String addVoucher(@ModelAttribute Voucher voucher) {
-        voucherRepo.save(voucher);
-        return "redirect:/vouchers";
-    }
-
-    @GetMapping("/update/{id}")
-    public String updateForm(@PathVariable int id, Model model) {
-        Voucher voucher = voucherRepo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Voucher not found"));
-        model.addAttribute("voucher", voucher);
-        return "update";
-    }
-
-    @PostMapping("/update/{id}")
-    public String updateVoucher(@PathVariable int id, @ModelAttribute Voucher voucher) {
-        voucher.setId(id); // Set the ID for the update
-        voucherRepo.save(voucher);
-        return "redirect:/vouchers";
-    }
-
-    @GetMapping("/delete/{id}")
-    public String deleteVoucher(@PathVariable int id) {
-        voucherRepo.deleteById(id);
-        return "redirect:/vouchers";
-    }
+//    @GetMapping("/voucher")
+//    public String index(Model model) {
+//        List<Voucher> vouchers = voucherRepo.findAll();
+//        model.addAttribute("vouchers", vouchers);
+//        return "index";
+//    }
+//
+//    @GetMapping("/add")
+//    public String addForm(Model model) {
+//        model.addAttribute("voucher", new Voucher());
+//        return "add";
+//    }
+//
+//    @PostMapping("/add")
+//    public String addVoucher(@ModelAttribute Voucher voucher) {
+//        voucherRepo.save(voucher);
+//        return "redirect:/vouchers";
+//    }
+//
+//    @GetMapping("/update/{id}")
+//    public String updateForm(@PathVariable int id, Model model) {
+//        Voucher voucher = voucherRepo.findById(id)
+//                .orElseThrow(() -> new RuntimeException("Voucher not found"));
+//        model.addAttribute("voucher", voucher);
+//        return "update";
+//    }
+//
+//    @PostMapping("/update/{id}")
+//    public String updateVoucher(@PathVariable int id, @ModelAttribute Voucher voucher) {
+//        voucher.setId(id); // Set the ID for the update
+//        voucherRepo.save(voucher);
+//        return "redirect:/vouchers";
+//    }
+//
+//    @GetMapping("/delete/{id}")
+//    public String deleteVoucher(@PathVariable int id) {
+//        voucherRepo.deleteById(id);
+//        return "redirect:/vouchers";
+//    }
 }

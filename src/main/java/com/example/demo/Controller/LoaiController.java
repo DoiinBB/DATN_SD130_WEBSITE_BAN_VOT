@@ -26,41 +26,41 @@ public class LoaiController {
         model.addAttribute("data", loais);
         return "loai/hienthi";
     }
-    @GetMapping("/create")
-    public String createForm(Model model) {
-        model.addAttribute("data", new Loai());
-        return "loai/add";
-    }
-
-    @PostMapping("/create")
-    public String create(@ModelAttribute("data") Loai loai) {
-        System.out.println(loai);
-        loaiRepo.save(loai);
-        return "redirect:/nguoi-dung/hien-thi";
-    }
-
-    @GetMapping("/edit/{id}")
-    public String editForm(@PathVariable Integer id, Model model) {
-//        List loai = loaiRepo.findById(id).orElse(null);
-//        if (loai != null) {
-            model.addAttribute("data", "");
-            return "loai/edit";
-//        }
+//    @GetMapping("/create")
+//    public String createForm(Model model) {
+//        model.addAttribute("data", new Loai());
+//        return "loai/add";
+//    }
+//
+//    @PostMapping("/create")
+//    public String create(@ModelAttribute("data") Loai loai) {
+//        System.out.println(loai);
+//        loaiRepo.save(loai);
+//        return "redirect:/nguoi-dung/hien-thi";
+//    }
+//
+//    @GetMapping("/edit/{id}")
+//    public String editForm(@PathVariable Integer id, Model model) {
+////        List loai = loaiRepo.findById(id).orElse(null);
+////        if (loai != null) {
+//            model.addAttribute("data", "");
+//            return "loai/edit";
+////        }
+////        return "redirect:/loai/hien-thi";
+//    }
+//
+//
+//    @PostMapping("/edit/{id}")
+//    public String edit(@PathVariable Integer id, @ModelAttribute("data") Loai loai) {
+//        loai.setId(id);
+//        loaiRepo.save(loai);
 //        return "redirect:/loai/hien-thi";
-    }
-
-
-    @PostMapping("/edit/{id}")
-    public String edit(@PathVariable Integer id, @ModelAttribute("data") Loai loai) {
-        loai.setId(id);
-        loaiRepo.save(loai);
-        return "redirect:/loai/hien-thi";
-    }
-
-    @GetMapping("/delete/{id}")
-    public String delete(@PathVariable Integer id) {
-        loaiRepo.deleteById(id.toString());
-        return "redirect:/loai/hien-thi";
-    }
+//    }
+//
+//    @GetMapping("/delete/{id}")
+//    public String delete(@PathVariable Integer id) {
+//        loaiRepo.deleteById(id.toString());
+//        return "redirect:/loai/hien-thi";
+//    }
 
 }

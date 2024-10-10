@@ -28,40 +28,40 @@ public class DiaChiController {
         model.addAttribute("data", diaChis);
         return "dia-chi/hienthi";
     }
-    @GetMapping("/create")
-    public String createForm(Model model) {
-        model.addAttribute("data", new Loai());
-        return "dia-chi/add";
-    }
-
-    @PostMapping("/create")
-    public String create(@ModelAttribute("data") DiaChi diaChi) {
-        System.out.println(diaChi);
-        diaChiRepo.save(diaChi);
-        return "redirect:/dia-chi/hien-thi";
-    }
-
-    @GetMapping("/edit/{id}")
-    public String editForm(@PathVariable Integer id, Model model) {
-//        List diaChi = diaChiRepo.findById(id.toString()).orElse(null);
-//        if (loai != null) {
-        model.addAttribute("data", "");
-//        return "loai/edit";
-//        }
-        return "redirect:/dia-chi/hien-thi";
-    }
-
-
-    @PostMapping("/edit/{id}")
-    public String edit(@PathVariable Integer id, @ModelAttribute("data") DiaChi diaChi) {
-        diaChi.setId(id);
-        diaChiRepo.save(diaChi);
-        return "redirect:/dia-chi/hien-thi";
-    }
-
-    @GetMapping("/delete/{id}")
-    public String delete(@PathVariable Integer id) {
-        diaChiRepo.deleteById(id.toString());
-        return "redirect:/dia-chi/hien-thi";
-    }
+//    @GetMapping("/create")
+//    public String createForm(Model model) {
+//        model.addAttribute("data", new Loai());
+//        return "dia-chi/add";
+//    }
+//
+//    @PostMapping("/create")
+//    public String create(@ModelAttribute("data") DiaChi diaChi) {
+//        System.out.println(diaChi);
+//        diaChiRepo.save(diaChi);
+//        return "redirect:/dia-chi/hien-thi";
+//    }
+//
+//    @GetMapping("/edit/{id}")
+//    public String editForm(@PathVariable Integer id, Model model) {
+////        List diaChi = diaChiRepo.findById(id.toString()).orElse(null);
+////        if (loai != null) {
+//        model.addAttribute("data", "");
+////        return "loai/edit";
+////        }
+//        return "redirect:/dia-chi/hien-thi";
+//    }
+//
+//
+//    @PostMapping("/edit/{id}")
+//    public String edit(@PathVariable Integer id, @ModelAttribute("data") DiaChi diaChi) {
+//        diaChi.setId(id);
+//        diaChiRepo.save(diaChi);
+//        return "redirect:/dia-chi/hien-thi";
+//    }
+//
+//    @GetMapping("dia-chi/delete/{id}")
+//    public String delete(@PathVariable Integer id) {
+//        diaChiRepo.deleteById(id.toString());
+//        return "redirect:/dia-chi/hien-thi";
+//    }
 }

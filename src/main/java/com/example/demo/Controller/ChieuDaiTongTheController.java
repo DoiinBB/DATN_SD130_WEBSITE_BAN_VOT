@@ -24,26 +24,26 @@ public class ChieuDaiTongTheController {
         return "hienthi";
     }
 
-    @PostMapping("chieudai/add")
-    public String add(ChieuDaiTongThe chieuDaiTongThe){
-        chieuDaiTongTheRepo.save(chieuDaiTongThe);
-        return "redirect:/chieudai/hienthi";
-    }
-
-    @GetMapping("chieudai/delete/{id}")
-    public String delete(@PathVariable Integer id){
-        chieuDaiTongTheRepo.deleteById(id);
-        return "redirect:/chieudai/hienthi";
-    }
-
-    @GetMapping("chieudai/view-update/{id}")
-    public String viewUpdate(@PathVariable Integer id, Model model){
-        model.addAttribute("cd", chieuDaiTongTheRepo.findById(id).get());
-        return "chieudai/update";
-    }
-    @PostMapping("chieudai/update/{id}")
-    public String update(ChieuDaiTongThe chieuDaiTongThe){
-        chieuDaiTongTheRepo.save(chieuDaiTongThe);
-        return "redirect:/chieudai/hienthi";
-    }
+//    @PostMapping("chieudai/add")
+//    public String add(ChieuDaiTongThe chieuDaiTongThe){
+//        chieuDaiTongTheRepo.save(chieuDaiTongThe);
+//        return "redirect:/chieudai/hienthi";
+//    }
+//
+//    @GetMapping("chieudai/delete/{id}")
+//    public String delete(@PathVariable Integer id){
+//        chieuDaiTongTheRepo.deleteById(id);
+//        return "redirect:/chieudai/hienthi";
+//    }
+//
+//    @GetMapping("chieudai/view-update/{id}")
+//    public String viewUpdate(@PathVariable Integer id, Model model){
+//        model.addAttribute("cd", chieuDaiTongTheRepo.findById(id).get());
+//        return "chieudai/update";
+//    }
+//    @PostMapping("chieudai/update/{id}")
+//    public String update(ChieuDaiTongThe chieuDaiTongThe){
+//        chieuDaiTongTheRepo.save(chieuDaiTongThe);
+//        return "redirect:/chieudai/hienthi";
+//    }
 }
